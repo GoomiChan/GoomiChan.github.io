@@ -1,50 +1,118 @@
-# Jekyll Template
+# HPSTR Jekyll Theme
 
-This is a minimalist template project for jekyll that you can customise to suit your needs.  The idea is to get you up and running with analytics and comments and feedback as quick as possible.
+They say three times the charm, so here is another free responsive Jekyll theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. If you've used my previous themes most of this should be familiar territory...
 
-I suggest you follow the [jekyll quick start instructions](http://jekyllrb.com/) to create your blog and then sync this template over it:
+## What HPSTR brings to the table:
 
-    gem install jekyll
-    jekyll new my-awesome-site
-    git clone https://github.com/krisb/jekyll-template.git
-    rsync -av --progress jekyll-template/ my-awesome-site/ --exclude .git --exclude README.md
-    cd my-awesome-site
-    jekyll serve
+* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
+* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
+* Modern and minimal design.
+* Sweet animated menu.
+* Readable typography to make your words shine.
+* Support for large images to call out your favorite posts.
+* Comments powered by [Disqus](http://disqus.com) if you choose to enable.
+* Social Sharing links for Facebook, Twitter, and Google+ if you choose to enable.
+* Simple and clear permalink structure.
+* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
+* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
+* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
+* [Grunt](http://gruntjs.com) build script for easy theme development
 
-## Markup
+[Theme Preview](http://mmistakes.github.io/hpstr-jekyll-theme)
 
-I prefer markdown, but you can use a number of supported markup formats.
+![HPSTR Theme Preview screenshot](http://mmistakes.github.io/hpstr-jekyll-theme/images/hpstr-jekyll-theme-preview.jpg)
 
-## Pygments (code highlighting)
+---
 
-Assuming you have python installed with `easy_install` available:
+General notes and suggestions for customizing **HPSTR**.
 
-    sudo easy_install Pygments
+## Basic Setup for a new Jekyll site
 
-## Rake tasks
+1. [Install Jekyll](http://jekyllrb.com) and read through the documentation if you haven't already.
+2. Fork the [HPSTR Jekyll THeme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork)
+3. Clone the repo you just forked to your computer.
+4. Edit `_config.yml` to personalize your site.
+5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, tags, and other YAML data.
+6. Read the documentation below for additional customization pointers and documentation.
 
-The following tasks are available (use `rake -T` to list them):
+[Download the Theme](https://github.com/mmistakes/hpstr-jekyll-theme)
 
-    rake build        # Build site with Jekyll
-    rake check_links  # Check links for site already running on localhost:4000
-    rake clean        # Clean up generated site
-    rake deploy       # Build then deploy using rsync
-    rake server       # Start server with --watch
+**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo that I'm guessing you don't want on your site.
 
-The deploy task is simplistic and uses rsync to copy the generated site to your server.  You will need to replace the username, servername and path as appropriate.
+---
 
-## Configuration
+## Setup for an Existing Jekyll site
 
-There are a number of values in `_config.yml` to customise your site.  Change as appropriate.
+1. Clone the following folders: `_includes`, `_layouts`, `assets`, and `images`.
+2. Clone the following files and personalize content as need: `about.md`, `archive.html`, `index.html`, `tags.html`, and `feed.xml`.
+3. Set the following variables in your `config.yml` file:
 
-Additionally, you can override and add additional values on a per page or post basis by adding variables into the front matter.  Support for the following is baked in:
+``` yaml
+title:            Site Title
+description:      Describe your website here.
+disqus_shortname: shortname
+# Your site's domain goes here. When working locally use localhost server leave blank
+# PS. If you set this wrong stylesheets and scripts won't load and most links will break.
+# PPS. If you leave it blank for local testing home links won't work, they'll be fine for live domains though.
+url:              http://localhost:4000
 
-* last_updated - will render updated date as well as original post date
-* superseded - reference to a another post url
+# Owner/author information
+owner:
+  name:           Your Name
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  email:          you@email.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    
 
-The following enhancements are baked in and enabled if you provide the configuration required.
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
 
-* [Google Analytics](http://www.google.com/analytics) - web analytics using the [async](http://www.google.com/support/analytics/bin/answer.py?hl=en&answer=174090) script
-* [Disqus](http://disqus.com/) - comments and feedback
-* [Feedburner](http://feedburner.google.com/) - rss feeds
-* [Github Ribbon](https://github.com/blog/273-github-ribbons) - fork me on github ribbon
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Theme Setup
+    url: /theme-setup
+  - title: External Link
+    url: http://mademistakes.com
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# Amount of posts to show on home page
+paginate: 5
+```
+
+---
+
+## More Theme Setup Goodness
+
+To learn more about how to customize the theme, include feature images in posts, use the Grunt build script, and some other junk, [read up here](http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/).
+
+---
+
+## Questions?
+
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
+
+---
+
+## License
+
+This theme is free and open source software, distributed under the [GNU General Public License](https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/LICENSE) version 2 or later. So feel free to to modify this theme to suit your needs. 
