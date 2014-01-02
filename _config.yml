@@ -1,19 +1,19 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Arkii stuff or things or something
+description:      I don't really know what this is going to be for :/
 disqus_shortname: 
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
+url:              http://goomichan.github.io
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Arkii
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  bio:            "Someone or something that tinkers with code, 3d models and all the general gamey stuff. Ends up breaking things , alot."
   email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:      http://twitter.com/Goomi__  
   facebook:       
-  github:         
+  github:         http://github.com/GoomiChan
   stackexchange:  
   linkedin:       
   instagram:      
