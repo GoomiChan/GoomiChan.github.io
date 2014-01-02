@@ -7,13 +7,13 @@ url:              http://goomichan.github.io
 # Owner/author information
 owner:
   name:           Arkii
-  avatar:         avatar.jpg
+  avatar:         avatar.png
   bio:            "Someone or something that tinkers with code, 3d models and all the general gamey stuff. Ends up breaking things , alot."
-  email:          you@email.com
+  email:          
   # Social networking links used in footer. Update and remove as you like.
-  twitter:      http://twitter.com/Goomi__  
+  twitter:      Goomi__  
   facebook:       
-  github:         http://github.com/GoomiChan
+  github:         GoomiChan
   stackexchange:  
   linkedin:       
   instagram:      
@@ -41,7 +41,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Éire
 future:      true
 pygments:    true
 markdown:    kramdown

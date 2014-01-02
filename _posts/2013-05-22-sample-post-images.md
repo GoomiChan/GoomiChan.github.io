@@ -4,6 +4,10 @@ title: "A Post with Images"
 description: "Examples and code for displaying images in posts."
 tags: [sample post, images, test]
 comments: true
+image:
+  feature: abstract-2.jpg
+  credit: 
+  creditlink: 
 share: true
 ---
 
