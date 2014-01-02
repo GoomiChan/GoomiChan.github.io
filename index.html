@@ -1,10 +1,24 @@
-<html>
-	<head>
-		<title>yay</title>
-	</head>
-	<body>
-		<center>
-			<img src="http://konachan.net/image/8c8485843d33e76ae470bd44a1f6be1d/Konachan.com%20-%20175696%20camera%20cuffs%20gayarou%20original%20scarf.jpg"/>
-		</center>
-	</body>
-</html>
+---
+layout: default
+description: A description about my blog homepage
+---
+
+<div id="posts">
+  <h2>Blog Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="pages">
+  <h2>Pages</h2>
+  <ul>
+    {% for page in site.html_pages %}
+      {% if page.title %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
