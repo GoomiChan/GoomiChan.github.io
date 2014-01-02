@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Firefall] Airii
+title: "[Firefall] Airii"
 description: "An in world dropship timetable"
 tags: [Firefall Addons Lua UI]
 image:
